@@ -1,8 +1,8 @@
-# AppOrganizer MVP 项目说明
+# AppSorter MVP 项目说明
 
 ## 项目背景
 
-`AppOrganizer` 是一个面向 macOS 的本地应用整理工具，目标是帮助用户将已安装应用按分类进行管理与浏览。  
+`AppSorter` 是一个面向 macOS 的本地应用整理工具，目标是帮助用户将已安装应用按分类进行管理与浏览。  
 项目当前定位为 **本机自用 MVP**，不依赖云端服务，不考虑上架流程，优先实现高频使用功能与快速迭代。
 
 核心需求：
@@ -13,7 +13,7 @@
 - 数据持久化在本机 JSON 文件中
 
 当前数据文件路径：
-- `~/Library/Application Support/AppOrganizer/library.json`
+- `~/Library/Application Support/AppSorter/library.json`
 
 ---
 
@@ -25,17 +25,17 @@
 
 - `Package.swift`
   - Swift 包配置，指定 macOS 平台与可执行 target
-- `Sources/AppOrganizer/AppOrganizerApp.swift`
+- `Sources/AppSorter/AppSorterApp.swift`
   - 应用入口（`@main`），创建主窗口并注入 `OrganizerViewModel`
-- `Sources/AppOrganizer/ContentView.swift`
+- `Sources/AppSorter/ContentView.swift`
   - 主界面与交互逻辑（侧边分类、详情网格、弹窗、提示、拖拽）
-- `Sources/AppOrganizer/OrganizerViewModel.swift`
+- `Sources/AppSorter/OrganizerViewModel.swift`
   - 核心业务逻辑与状态管理（分类管理、自动整理、保存）
-- `Sources/AppOrganizer/AppScanner.swift`
+- `Sources/AppSorter/AppScanner.swift`
   - 扫描系统应用目录并构建应用清单；负责打开应用
-- `Sources/AppOrganizer/Models.swift`
+- `Sources/AppSorter/Models.swift`
   - 数据模型定义（`CategoryRecord`、`AppDatabase`、`InstalledApp`）
-- `Sources/AppOrganizer/JSONStore.swift`
+- `Sources/AppSorter/JSONStore.swift`
   - JSON 持久化读写（Application Support 下的 `library.json`）
 - `Resources/Info.plist`
   - `.app` 打包所需基础元数据
@@ -68,7 +68,7 @@
 在终端执行：
 
 ```bash
-cd /Users/heloveyy/Desktop/Cursor/AppOrganizerMVP
+cd /Users/heloveyy/Desktop/Cursor/AppSorter
 swift run
 ```
 
@@ -77,24 +77,24 @@ swift run
 ### 2) 编译检查
 
 ```bash
-cd /Users/heloveyy/Desktop/Cursor/AppOrganizerMVP
+cd /Users/heloveyy/Desktop/Cursor/AppSorter
 swift build
 ```
 
 ### 3) 打包为可运行 `.app`
 
 ```bash
-cd /Users/heloveyy/Desktop/Cursor/AppOrganizerMVP
+cd /Users/heloveyy/Desktop/Cursor/AppSorter
 ./bundle-app.sh
 ```
 
 打包输出：
-- `dist/AppOrganizer.app`
+- `dist/AppSorter.app`
 
 运行方式：
 
 ```bash
-open "/Users/heloveyy/Desktop/Cursor/AppOrganizerMVP/dist/AppOrganizer.app"
+open "/Users/heloveyy/Desktop/Cursor/AppSorter/dist/AppSorter.app"
 ```
 
 ---

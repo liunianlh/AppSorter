@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "AppOrganizer",
+    name: "AppSorter",
     platforms: [
         .macOS(.v13),
     ],
     targets: [
         .executableTarget(
-            name: "AppOrganizer",
-            path: "Sources/AppOrganizer"
+            name: "AppSorter",
+            path: "Sources/AppSorter"
         ),
     ]
 )

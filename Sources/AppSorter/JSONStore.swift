@@ -6,7 +6,7 @@ enum JSONStore {
     private static var supportDirectory: URL {
         let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
             ?? FileManager.default.temporaryDirectory
-        let dir = base.appendingPathComponent("AppOrganizer", isDirectory: true)
+        let dir = base.appendingPathComponent("AppSorter", isDirectory: true)
         try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
         return dir
     }

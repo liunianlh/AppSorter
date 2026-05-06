@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT"
 
-APP_NAME="AppOrganizer"
+APP_NAME="AppSorter"
 DIST_DIR="${ROOT}/dist"
 APP_BUNDLE="${DIST_DIR}/${APP_NAME}.app"
 

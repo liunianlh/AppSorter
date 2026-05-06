@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct AppOrganizerApp: App {
+struct AppSorterApp: App {
     @StateObject private var organizer = OrganizerViewModel()
 
     var body: some Scene {

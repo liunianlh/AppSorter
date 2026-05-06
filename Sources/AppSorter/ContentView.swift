@@ -103,7 +103,7 @@ struct ContentView: View {
                 }
             }
         }
-        .navigationTitle("AppOrganizer")
+        .navigationTitle("AppSorter")
         .navigationSplitViewColumnWidth(min: 200, ideal: 220)
         .toolbar {
             ToolbarItem(placement: .automatic) {
